@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bol$illo Lleno 🤑 | 4X Suerte - La Única Rifa con 4 Oportunidades de Ganar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --verde-principal: #0d3321;
+            --verde-claro: #1a5c3a;
+            --verde-neon: #2ecc71;
+            --dorado: #ffd700;
+            --dorado-suave: #f4d03f;
+            --negro: #0a0a0a;
+            --gris-oscuro: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--negro);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header fijo */
+        header {
+            background: rgba(13, 51, 33, 0.98);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--dorado);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid var(--dorado);
+            object-fit: cover;
+        }
+        
+        .brand-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            background: linear-gradient(135deg, var(--dorado) 0%, #fff 50%, var(--dorado) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-cta {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section con fondo del RANKING */
+        .hero {
+            margin-top: 80px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(13,51,33,0.85) 0%, rgba(0,0,0,0.9) 100%), 
+                        url('https://i.imgur.com/JzrDSn6.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .hero-content {
+            text-align: left;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,215,0,0.2);
+            border: 1px solid var(--dorado);
+            color: var(--dorado);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+        }
+        
+        .hero h1 .highlight {
+            color: var(--dorado);
+            display: block;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-top: 8px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            margin-bottom: 25px;
+            opacity: 0.95;
+            max-width: 500px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+        }
+        
+        .hero-subtitle strong {
+            color: var(--dorado);
+        }
+        
+        /* Imagen del Admin */
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .admin-photo {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 25px;
+            border: 4px solid var(--dorado);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,215,0,0.3);
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .photo-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--dorado) 0%, var(--dorado-suave) 100%);
+            color: var(--negro);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            z-index: 3;
+            white-space: nowrap;
+        }
+        
+        .photo-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--dorado);
+            border-radius: 25px;
+            top: 15px;
+            left: 15px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        /* Precios y Combos */
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .price-box {
+            background: rgba(0,0,0,0.7);
+            border: 2px solid rgba(255,215,0,0.4);
+            border-radius: 15px;
+            padding: 18px;
+            flex: 1;
+            min-width: 130px;
+            text-align: center;
+            transition: all 0.2s;
+            backdrop-filter: blur(5px);
+        }
+        
+        .price-box:hover {
+            border-color: var(--dorado);
+            transform: translateY(-3px);
+        }
+        
+        .price-box.combo {
+            background: linear-gradient(135deg, rgba(255,215,0,0.3) 0%, rgba(13,51,33,0.8) 100%);
+            border-color: var(--dorado);
+            position: relative;
+            transform: scale(1.05);
+        }
+        
+        .badge-limited {
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            background: #ff4444;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .price-label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .price-amount {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--dorado);
+            line-height: 1;
+        }
+        
+        .price-detail {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        .combo-tag {
+            display: inline-block;
+            background: var(--dorado);
+            color: var(--negro);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+        
+        .urgency-text {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #ff6b6b;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+        }
+        
+        /* Sección de diferenciación */
+        .difference {
+            padding: 80px 20px;
+            background: var(--gris-oscuro);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dorado);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card.competencia {
+            opacity: 0.6;
+        }
+        
+        .card.nosotros {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(13,51,33,0.4) 100%);
+            border-color: var(--dorado);
+            box-shadow: 0 10px 40px rgba(255,215,0,0.15);
+            position: relative;
+            transform: scale(1.02);
+        }
+        
+        .card.nosotros:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+        
+        .badge-popular {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dorado);
+            color: var(--negro);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .card.competencia h3 {
+            color: #888;
+        }
+        
+        .card.nosotros h3 {
+            color: var(--dorado);
+        }
+        
+        .number-big {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 20px 0;
+        }
+        
+        .card.competencia .number-big {
+            color: #555;
+        }
+        
+        .card.nosotros .number-big {
+            color: var(--dorado);
+        }
+        
+        .card-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        /* 4 formas de ganar */
+        .how-to-win {
+            margin-top: 60px;
+        }
+        
+        .how-to-win h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .method-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--dorado);
+            background: rgba(255,215,0,0.05);
+        }
+        
+        .method-num {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--dorado) 0%, var(--dorado-suave) 100%);
+            color: var(--negro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin: 0 auto 15px;
+        }
+        
+        .method-card h4 {
+            color: var(--dorado);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .method-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .method-prize {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--verde-neon);
+        }
+        
+        /* Pruebas sociales */
+        .proofs {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--negro) 0%, var(--verde-principal) 100%);
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--dorado);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .proof-card {
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,215,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .proof-card:hover {
+            transform: scale(1.02);
+            border-color: var(--dorado);
+        }
+        
+        .proof-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            background: #222;
+        }
+        
+        .proof-info {
+            padding: 20px;
+        }
+        
+        .proof-info h4 {
+            color: var(--dorado);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .proof-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .proof-amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--verde-neon);
+        }
+        
+        /* Confianza */
+        .trust {
+            padding: 60px 20px;
+            background: var(--gris-oscuro);
+            text-align: center;
+        }
+        
+        .trust-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 150px;
+        }
+        
+        .trust-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,215,0,0.1);
+            border: 2px solid var(--dorado);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--dorado);
+            transition: all 0.2s;
+        }
+        
+        .trust-item:hover .trust-icon {
+            background: var(--dorado);
+            color: var(--negro);
+            transform: scale(1.1);
+        }
+        
+        .trust-item span {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .trust-item small {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        /* CTA Final */
+        .final-cta {
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, rgba(255,215,0,0.1) 0%, var(--negro) 70%);
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .final-cta .highlight {
+            color: var(--dorado);
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .buttons-wrapper {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+        }
+        
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--dorado);
+            border: 2px solid var(--dorado);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-outline:hover {
+            background: var(--dorado);
+            color: var(--negro);
+        }
+        
+        .bonus-text {
+            display: inline-block;
+            background: rgba(255,215,0,0.15);
+            border: 1px solid var(--dorado);
+            padding: 15px 30px;
+            border-radius: 30px;
+            color: var(--dorado);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,215,0,0.2);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+        
+        .footer-text {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .disclaimer {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        
+        /* WhatsApp flotante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+                order: 2;
+            }
+            
+            .hero-image {
+                order: 1;
+            }
+            
+            .admin-photo {
+                max-width: 280px;
+            }
+            
+            .pricing-container {
+                justify-content: center;
+            }
+            
+            .hero-subtitle {
+                margin: 0 auto 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 15px;
+            }
+            
+            .brand-text {
+                font-size: 1.1rem;
+            }
+            
+            .header-cta {
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .hero {
+                padding: 100px 15px 40px;
+            }
+            
+            .admin-photo {
+                max-width: 250px;
+            }
+            
+            .photo-badge {
+                font-size: 0.8rem;
+                padding: 8px 20px;
+                bottom: 20px;
+            }
+            
+            .stats-row {
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .trust-grid {
+                gap: 30px;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .proof-image {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <img src="https://i.imgur.com/GHIhUQo.jpg" alt="Bol$illo Lleno" class="brand-logo">
+                <span class="brand-text">Bol$illo Lleno 🤑</span>
+            </div>
+            <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="header-cta">
+                <i class="fab fa-whatsapp"></i> Unirme al Grupo
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hero con fondo del RANKING -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">🔥 Más de 483 miembros activos</div>
+                <h1>
+                    La Única Rifa donde<br>
+                    <span class="highlight">LA SUERTE SÍ TE ALCANZA</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Mientras otros grupos solo pagan a <strong>3 ganadores</strong>, nosotros tenemos 
+                    <strong>4 OPORTUNIDADES</strong> de ganar con un solo número. 
+                    <br>¡Bendición garantizada! 🍀
+                </p>
+                
+                <div class="pricing-container">
+                    <div class="price-box">
+                        <div class="price-label">Número</div>
+                        <div class="price-amount">$2.000</div>
+                        <div class="price-detail">Una oportunidad</div>
+                    </div>
+                    
+                    <div class="price-box combo">
+                        <span class="badge-limited">Limitado</span>
+                        <div class="price-label">Combo</div>
+                        <div class="price-amount">$5.000</div>
+                        <div class="price-detail">3 números</div>
+                        <span class="combo-tag">AHORRA $1.000</span>
+                    </div>
+                </div>
+                
+                <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> QUIERO MI NÚMERO DE LA SUERTE
+                </a>
+                
+                <p class="urgency-text">
+                    ⚠️ Solo quedan 15 números para el sorteo de hoy • Sorteo en vivo 8:00 PM
+                </p>
+            </div>
+            
+            <div class="hero-image">
+                <div class="photo-decoration"></div>
+                <img src="https://i.imgur.com/EVmDO3Y.jpg" alt="Admin Bol$illo Lleno" class="admin-photo">
+                <div class="photo-badge">👑 Admin Bol$illo Lleno</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Diferenciación -->
+    <section class="difference">
+        <div class="container">
+            <h2 class="section-title">¿Por qué somos diferentes?</h2>
+            
+            <div class="comparison-grid">
+                <div class="card competencia">
+                    <h3>OTROS GRUPOS ❌</h3>
+                    <div class="number-big">3</div>
+                    <p class="card-desc">Ganadores por tabla<br>Menos oportunidades</p>
+                </div>
+                
+                <div class="card nosotros">
+                    <span class="badge-popular">Mejor Opción</span>
+                    <h3>BOL$ILLO LLENO ✅</h3>
+                    <div class="number-big">4</div>
+                    <p class="card-desc">Oportunidades con UN número<br>33% más chances de ganar</p>
+                </div>
+            </div>
+            
+            <div class="how-to-win">
+                <h3>Las 4 Formas de Ganar 🍀</h3>
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <div class="method-num">1</div>
+                        <h4>Premio Mayor</h4>
+                        <p>Últimas 2 cifras</p>
+                        <div class="method-prize">$100.000</div>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-num">2</div>
+                        <h4>Premio Dos</h4>
+                        <p>Primeras 2 cifras</p>
+                        <div class="method-prize">$10.000</div>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-num">3</div>
+                        <h4>Premio Tres</h4>
+                        <p>2 cifras del medio</p>
+                        <div class="method-prize">$10.000</div>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-num">4</div>
+                        <h4>Premio Cuatro</h4>
+                        <p>Cifras en esquinas</p>
+                        <div class="method-prize">$10.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pruebas -->
+    <section class="proofs">
+        <div class="container">
+            <h2 class="section-title">💰 Promesas Cumplidas, Premios Pagados</h2>
+            <p style="text-align: center; margin-bottom: 40px; opacity: 0.9;">
+                Aquí no solo jugamos, <strong>¡aquí COBRAMOS!</strong> Comprobantes reales de nuestros ganadores:
+            </p>
+            
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-number">483+</span>
+                    <div class="stat-label">Miembros Activos</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">156+</span>
+                    <div class="stat-label">Premios Entregados</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$45M+</span>
+                    <div class="stat-label">Pesos Pagados</div>
+                </div>
+            </div>
+            
+            <div class="gallery">
+                <!-- Testimonio 1 -->
+                <div class="proof-card">
+                    <img src="https://i.imgur.com/Arc6wKK.jpg" alt="Comprobante de pago - Ingrid Paola" class="proof-image">
+                    <div class="proof-info">
+                        <h4>🎉 Ingrid Paola Villamizar</h4>
+                        <p>Ganadora del Premio Mayor</p>
+                        <div class="proof-amount">$100.000</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="proof-card">
+                    <img src="https://i.imgur.com/XGaze80.jpg" alt="Comprobante de pago - Sorteo 7897" class="proof-image">
+                    <div class="proof-info">
+                        <h4>🎉 Jesús Arley</h4>
+                        <p>Ganador Sinuano Día</p>
+                        <div class="proof-amount">$95.000</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="proof-card">
+                    <img src="https://i.imgur.com/U7UMaqt.jpg" alt="Comprobante de pago - Judith y Charlie" class="proof-image">
+                    <div class="proof-info">
+                        <h4>🎉 Sorteo #7897</h4>
+                        <p>Múltiples Ganadores</p>
+                        <div class="proof-amount">$120.000</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 4 -->
+                <div class="proof-card">
+                    <img src="https://i.imgur.com/PwZEfR5.jpg" alt="Comprobante de pago - Jesús Arley" class="proof-image">
+                    <div class="proof-info">
+                        <h4>🎉 Judith & Charlie</h4>
+                        <p>Ganadores Múltiples</p>
+                        <div class="proof-amount">$120.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Confianza -->
+    <section class="trust">
+        <div class="container">
+            <h2 class="section-title">¿Por qué confiar en nosotros?</h2>
+            
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span>Pagos Instantáneos</span>
+                    <small>Nequi/Daviplata</small>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <span>Transparencia Total</span>
+                    <small>Sorteos en vivo</small>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span>Comunidad VIP</span>
+                    <small>+480 miembros</small>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <span>100% Legal</span>
+                    <small>Rifas autorizadas</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>
+                No dejes que la casa gane 🏠❌<br>
+                <span class="highlight">Únete a la racha ganadora 🍀✅</span>
+            </h2>
+            <p>El lugar donde la suerte sí te alcanza. ¡Bendición garantizada!</p>
+            
+            <div class="buttons-wrapper">
+                <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="btn-primary btn-large">
+                    <i class="fab fa-whatsapp"></i> Unirme al Grupo VIP
+                </a>
+                <a href="https://wa.me/573237343963?text=Hola!%20Tengo%20dudas%20sobre%20Bol$illo%20Lleno" class="btn-outline">
+                    <i class="fab fa-whatsapp"></i> Hablar con Asesor
+                </a>
+            </div>
+            
+            <div class="bonus-text">
+                <i class="fas fa-gift"></i> Bono especial: Doble oportunidad en tu primera jugada
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Bol$illo Lleno 🤑</div>
+            <p class="footer-text">Dinámicas VIP Colombia © 2026</p>
+            
+            <div class="disclaimer">
+                <strong>Juego responsable:</strong> Sitio de entretenimiento para mayores de 18 años. 
+                Juega con responsabilidad. Los resultados pueden variar. 
+                Sorteos basados en resultados oficiales de la Lotería de la Cruz Roja, 
+                Sinuano y otros sorteos autorizados en Colombia.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Flotante -->
+    <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
