@@ -176,14 +176,15 @@
             flex-direction: column;
         }
         
-        /* Banner de Sorteos Activos - NEUROMARKETING MEJORADO */
-        .sorteos-banner-container {
+        /* Banner de Sorteos Activos - TODA LA ZONA ROJA ES CLICKEABLE */
+        .sorteos-banner-wrapper {
             width: 100%;
             max-width: 420px;
             margin-bottom: 20px;
             position: relative;
             animation: shake 3s infinite;
-            cursor: pointer;
+            display: block;
+            text-decoration: none;
         }
         
         @keyframes shake {
@@ -192,6 +193,10 @@
             94% { transform: translateX(3px); }
             96% { transform: translateX(-3px); }
             98% { transform: translateX(3px); }
+        }
+        
+        .sorteos-banner-wrapper:hover {
+            transform: scale(1.02);
         }
         
         .urgency-badge {
@@ -212,7 +217,6 @@
             animation: blink 1s infinite;
             white-space: nowrap;
             border: 2px solid white;
-            pointer-events: none;
         }
         
         @keyframes blink {
@@ -227,7 +231,6 @@
             padding: 25px 30px;
             border-radius: 20px;
             text-align: center;
-            text-decoration: none;
             font-weight: 900;
             font-size: 1.4rem;
             box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6), 0 0 60px rgba(255, 45, 45, 0.4);
@@ -261,11 +264,6 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
         
-        .sorteos-banner:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.8), 0 0 80px rgba(255, 45, 45, 0.6);
-        }
-        
         .sorteos-banner .main-text {
             font-size: 1.6rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -282,7 +280,6 @@
             position: relative;
             z-index: 2;
             border: 2px solid rgba(255,255,255,0.5);
-            cursor: pointer;
         }
         
         .sorteos-banner .cta-text {
@@ -322,7 +319,6 @@
             font-size: 2rem;
             animation: bounce-down 1s infinite;
             z-index: 5;
-            pointer-events: none;
         }
         
         @keyframes bounce-down {
@@ -949,7 +945,7 @@
             transform: scale(1.1);
         }
         
-        /* Botón flotante de Sorteos Activos - NEUROMARKETING MEJORADO */
+        /* Botón flotante de Sorteos Activos */
         .sorteos-float-container {
             position: fixed;
             bottom: 110px;
@@ -1112,7 +1108,7 @@
                 max-width: 280px;
             }
             
-            .sorteos-banner-container {
+            .sorteos-banner-wrapper {
                 max-width: 300px;
             }
             
@@ -1285,8 +1281,8 @@
             </div>
             
             <div class="hero-image">
-                <!-- Banner de Sorteos Activos - TODO CLICKEABLE -->
-                <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="sorteos-banner-container">
+                <!-- Banner de Sorteos Activos - TODA LA ZONA ROJA ES CLICKEABLE -->
+                <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="sorteos-banner-wrapper">
                     <div class="urgency-badge">🔥 ¡Últimos Cupos!</div>
                     <div class="sorteos-banner">
                         <i class="fas fa-fire"></i>
@@ -1518,7 +1514,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     
-    <!-- Botón Flotante de Sorteos Activos - Super Llamativo -->
+    <!-- Botón Flotante de Sorteos Activos -->
     <div class="sorteos-float-container">
         <div class="sorteos-float-urgency">¡Apuesta Ya!</div>
         <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="sorteos-float" title="Ver Sorteos Activos">
