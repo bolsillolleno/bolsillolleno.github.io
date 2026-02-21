@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bol$illo Lleno 💰 | 4X Suerte - La Única Rifa con 4 Oportunidades de Ganar</title>
+    <title>Bol$illo Lleno  | 4X Suerte - La Única Rifa con 4 Oportunidades de Ganar</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -325,138 +325,6 @@
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(10px); }
         }
-        
-        /* ===== BOTÓN NEUROMARKETING ===== */
-        .neuro-btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #ff6b35 0%, #ff2d2d 50%, #ff0000 100%);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin: 25px 0;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.6), 0 0 60px rgba(255, 45, 45, 0.4), inset 0 2px 0 rgba(255,255,255,0.3);
-            border: 4px solid var(--dorado);
-            position: relative;
-            overflow: hidden;
-            animation: pulse-neuro 1.5s infinite, shake-neuro 4s infinite;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-        
-        @keyframes pulse-neuro {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 0 10px 40px rgba(255, 107, 53, 0.6), 0 0 60px rgba(255, 45, 45, 0.4), inset 0 2px 0 rgba(255,255,255,0.3);
-            }
-            50% { 
-                transform: scale(1.03);
-                box-shadow: 0 15px 50px rgba(255, 107, 53, 0.8), 0 0 80px rgba(255, 45, 45, 0.6), inset 0 2px 0 rgba(255,255,255,0.3);
-            }
-        }
-        
-        @keyframes shake-neuro {
-            0%, 92%, 100% { transform: translateX(0) scale(1); }
-            93% { transform: translateX(-3px) scale(1.03); }
-            94% { transform: translateX(3px) scale(1.03); }
-            95% { transform: translateX(-3px) scale(1.03); }
-            96% { transform: translateX(3px) scale(1.03); }
-            97% { transform: translateX(0) scale(1.03); }
-        }
-        
-        .neuro-btn::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.4), transparent);
-            transform: rotate(45deg);
-            animation: shine-neuro 2.5s infinite;
-        }
-        
-        @keyframes shine-neuro {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        .neuro-btn:hover {
-            transform: scale(1.08) translateY(-3px);
-            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.9), 0 0 100px rgba(255, 45, 45, 0.7), inset 0 2px 0 rgba(255,255,255,0.3);
-            animation: none;
-        }
-        
-        .neuro-text-main {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            z-index: 2;
-            animation: bounce-text 0.8s infinite;
-        }
-        
-        @keyframes bounce-text {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
-        }
-        
-        .neuro-text-sub {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-top: 5px;
-            opacity: 0.95;
-            position: relative;
-            z-index: 2;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-        
-        .neuro-urgency {
-            font-size: 0.75rem;
-            font-weight: 800;
-            margin-top: 8px;
-            padding: 5px 15px;
-            background: rgba(0,0,0,0.4);
-            border-radius: 20px;
-            border: 2px solid var(--dorado);
-            color: var(--dorado);
-            position: relative;
-            z-index: 2;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: blink-urgency 1s infinite;
-        }
-        
-        @keyframes blink-urgency {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0.7; }
-        }
-        
-        /* Flecha indicadora */
-        .neuro-btn::after {
-            content: '👇';
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem;
-            animation: bounce-arrow 1s infinite;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-        }
-        
-        @keyframes bounce-arrow {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-        /* ===== FIN BOTÓN NEUROMARKETING ===== */
         
         .admin-photo {
             width: 100%;
@@ -1260,25 +1128,6 @@
                 font-size: 0.8rem;
             }
             
-            /* Responsive para el botón neuromarketing */
-            .neuro-btn {
-                max-width: 300px;
-                padding: 18px 30px;
-                margin: 20px 0;
-            }
-            
-            .neuro-text-main {
-                font-size: 1.4rem;
-            }
-            
-            .neuro-text-sub {
-                font-size: 0.85rem;
-            }
-            
-            .neuro-urgency {
-                font-size: 0.7rem;
-            }
-            
             .admin-description {
                 max-width: 280px;
                 padding: 20px;
@@ -1351,17 +1200,6 @@
                 bottom: 20px;
             }
             
-            /* Responsive móvil para botón neuromarketing */
-            .neuro-btn {
-                max-width: 280px;
-                padding: 16px 25px;
-            }
-            
-            .neuro-text-main {
-                font-size: 1.3rem;
-                letter-spacing: 1px;
-            }
-            
             .stats-row {
                 gap: 30px;
             }
@@ -1394,7 +1232,7 @@
         <div class="header-container">
             <div class="brand">
                 <img src="https://i.imgur.com/GHIhUQo.jpg" alt="Bol$illo Lleno" class="brand-logo">
-                <span class="brand-text">Bol$illo Lleno 💰</span>
+                <span class="brand-text">Bol$illo Lleno </span>
             </div>
             <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="header-cta">
                 <i class="fab fa-whatsapp"></i> Unirme al Grupo
@@ -1406,7 +1244,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="badge">✅ Más de 483 miembros activos</div>
+                <div class="badge"> Más de 483 miembros activos</div>
                 <h1>
                     La Única Rifa donde<br>
                     <span class="highlight">LA SUERTE SÍ TE ALCANZA</span>
@@ -1414,7 +1252,7 @@
                 <p class="hero-subtitle">
                     Mientras otros grupos solo pagan a <strong>3 ganadores</strong>, nosotros tenemos 
                     <strong>4 OPORTUNIDADES</strong> de ganar con un solo número. 
-                    <br>¡Bendición garantizada! 🙏
+                    <br>¡Bendición garantizada! 
                 </p>
                 
                 <div class="pricing-container">
@@ -1433,46 +1271,37 @@
                     </div>
                 </div>
                 
-                <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="btn-primary">
-                    <i class="fab fa-whatsapp"></i> QUIERO MI NÚMERO DE LA SUERTE
-                </a>
-                
+                <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="btn-primary">
+    <i class="fas fa-ticket-alt"></i> QUIERO MI NÚMERO DE LA SUERTE
+</a>      
                 <p class="urgency-text">
-                    ⏰🔥 Solo quedan 15 números para el sorteo de hoy • Sorteo en vivo 8:00 PM
+                     Solo quedan 15 números para el sorteo de hoy • Sorteo en vivo 8:00 PM
                 </p>
             </div>
             
             <div class="hero-image">
                 <!-- Banner de Sorteos Activos - TODA LA ZONA ROJA ES CLICKEABLE -->
                 <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="sorteos-banner-wrapper">
-                    <div class="urgency-badge">🔥 ¡Últimos Cupos!</div>
+                    <div class="urgency-badge"> ¡Últimos Cupos!</div>
                     <div class="sorteos-banner">
                         <i class="fas fa-fire"></i>
                         <span class="main-text">SORTEOS ACTIVOS</span>
-                        <span class="sub-text">🎁 Escoge tu Bendición</span>
-                        <span class="cta-text">👉 ¡Haz tu Fe Ahora! 👈</span>
+                        <span class="sub-text"> Escoge tu Bendición</span>
+                        <span class="cta-text"> ¡Haz tu Fe Ahora! </span>
                     </div>
                     <div class="arrow-down">
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </a>
                 
-                <!-- ===== BOTÓN NEUROMARKETING NUEVO ===== -->
-                <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="neuro-btn">
-                    <span class="neuro-text-main">🔥 ESCOGE AQUÍ 🔥</span>
-                    <span class="neuro-text-sub">Tu número de la suerte te espera</span>
-                    <span class="neuro-urgency">⚡ Solo quedan pocos cupos</span>
-                </a>
-                <!-- ===== FIN BOTÓN NEUROMARKETING ===== -->
-                
                 <div class="photo-decoration"></div>
                 <img src="https://i.imgur.com/tWtHasT.jpeg" alt="Admin Bol$illo Lleno" class="admin-photo">
-                <div class="photo-badge">👤 Admin Bol$illo Lleno</div>
+                <div class="photo-badge"> Admin Bol$illo Lleno</div>
                 
                 <!-- Descripción del Admin -->
                 <div class="admin-description">
                     <h3><i class="fas fa-user-tie"></i> Camilo Martínez</h3>
-                    <p><strong>El Corazón de Bol$illo Lleno 💚 💛</strong></p>
+                    <p><strong>El Corazón de Bol$illo Lleno  </strong></p>
                     <p>Soy un emprendedor de 29 años, orgullosamente Antioqueño. Bol$illo Lleno nació en 2025, en medio de un momento de desempleo que me obligó a reinventarme.</p>
                     <p>Como tú, siempre participé en dinámicas de números, pero me cansé de los grupos donde nunca había promociones y ganar parecía imposible.</p>
                     <p>Por eso creé algo diferente: una comunidad donde el jugador es la prioridad. Ofrecemos combos con promociones especiales que multiplican tus chances de ganar sin vaciar tu bolsillo.</p>
@@ -1490,21 +1319,21 @@
             
             <div class="comparison-grid">
                 <div class="card competencia">
-                    <h3>OTROS GRUPOS ❌</h3>
+                    <h3>OTROS GRUPOS </h3>
                     <div class="number-big">3</div>
                     <p class="card-desc">Ganadores por tabla<br>Menos oportunidades</p>
                 </div>
                 
                 <div class="card nosotros">
                     <span class="badge-popular">Mejor Opción</span>
-                    <h3>BOL$ILLO LLENO ✅</h3>
+                    <h3>BOL$ILLO LLENO </h3>
                     <div class="number-big">4</div>
                     <p class="card-desc">Oportunidades con UN número<br>33% más chances de ganar</p>
                 </div>
             </div>
             
             <div class="how-to-win">
-                <h3>Las 4 Formas de Ganar 🎯</h3>
+                <h3>Las 4 Formas de Ganar </h3>
                 <div class="methods-grid">
                     <div class="method-card">
                         <div class="method-num">1</div>
@@ -1538,7 +1367,7 @@
     <!-- Pruebas -->
     <section class="proofs">
         <div class="container">
-            <h2 class="section-title">✅ Promesas Cumplidas, Premios Pagados</h2>
+            <h2 class="section-title"> Promesas Cumplidas, Premios Pagados</h2>
             <p style="text-align: center; margin-bottom: 40px; opacity: 0.9;">
                 Aquí no solo jugamos, <strong>¡aquí COBRAMOS!</strong> Comprobantes reales de nuestros ganadores:
             </p>
@@ -1563,7 +1392,7 @@
                 <div class="proof-card">
                     <img src="https://i.imgur.com/Arc6wKK.jpg" alt="Comprobante de pago - Ingrid Paola" class="proof-image">
                     <div class="proof-info">
-                        <h4>🏆 Ingrid Paola Villamizar</h4>
+                        <h4> Ingrid Paola Villamizar</h4>
                         <p>Ganadora del Premio Mayor</p>
                         <div class="proof-amount">$100.000</div>
                     </div>
@@ -1573,7 +1402,7 @@
                 <div class="proof-card">
                     <img src="https://i.imgur.com/XGaze80.jpg" alt="Comprobante de pago - Sorteo 7897" class="proof-image">
                     <div class="proof-info">
-                        <h4>🏆 Jesús Arley</h4>
+                        <h4> Jesús Arley</h4>
                         <p>Ganador Sinuano Día</p>
                         <div class="proof-amount">$95.000</div>
                     </div>
@@ -1583,7 +1412,7 @@
                 <div class="proof-card">
                     <img src="https://i.imgur.com/U7UMaqt.jpg" alt="Comprobante de pago - Judith y Charlie" class="proof-image">
                     <div class="proof-info">
-                        <h4>🏆 Sorteo #7897</h4>
+                        <h4> Sorteo #7897</h4>
                         <p>Múltiples Ganadores</p>
                         <div class="proof-amount">$120.000</div>
                     </div>
@@ -1593,7 +1422,7 @@
                 <div class="proof-card">
                     <img src="https://i.imgur.com/PwZEfR5.jpg" alt="Comprobante de pago - Jesús Arley" class="proof-image">
                     <div class="proof-info">
-                        <h4>🏆 Judith & Charlie</h4>
+                        <h4> Judith & Charlie</h4>
                         <p>Ganadores Múltiples</p>
                         <div class="proof-amount">$120.000</div>
                     </div>
@@ -1644,8 +1473,8 @@
     <section class="final-cta">
         <div class="container">
             <h2>
-                No dejes que la casa gane ❌❌<br>
-                <span class="highlight">Únete a la racha ganadora 🔥🔥</span>
+                No dejes que la casa gane <br>
+                <span class="highlight">Únete a la racha ganadora </span>
             </h2>
             <p>El lugar donde la suerte sí te alcanza. ¡Bendición garantizada!</p>
             
@@ -1653,9 +1482,9 @@
                 <a href="https://chat.whatsapp.com/Hn8QhqoUUv0610x9dM6D67?mode=gi_t" class="btn-primary btn-large">
                     <i class="fab fa-whatsapp"></i> Unirme al Grupo VIP
                 </a>
-                <a href="https://wa.me/573237343963?text=Hola!%20Tengo%20dudas%20sobre%20Bol$illo%20Lleno" class="btn-outline">
-                    <i class="fab fa-whatsapp"></i> Hablar con Asesor
-                </a>
+         <a href="https://wa.me/573237343858?text=Hola!%20Tengo%20dudas%20sobre%20Bol$illo%20Lleno" class="btn-outline">
+    <i class="fab fa-whatsapp"></i> Hablar con Asesor
+</a>
             </div>
             
             <div class="bonus-text">
@@ -1667,7 +1496,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Bol$illo Lleno 💰</div>
+            <div class="footer-logo">Bol$illo Lleno </div>
             <p class="footer-text">Dinámicas VIP Colombia © 2026</p>
             
             <div class="disclaimer">
@@ -1691,7 +1520,7 @@
             <i class="fas fa-fire-alt"></i>
             <span class="sorteos-float-text">Tu<br>Bendición</span>
         </a>
-        <div class="sorteos-float-label">🔥 Escoge y Gana 💰</div>
+        <div class="sorteos-float-label"> Escoge y Gana </div>
     </div>
 </body>
 </html>
