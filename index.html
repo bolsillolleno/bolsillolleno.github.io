@@ -1308,6 +1308,83 @@
         font-size: 0.85rem;
     }
 }
+/* Flecha llamativa que señala el botón - NEUROMARKETING */
+.click-here-pointer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    animation: bounce-pointer 1.2s infinite;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Flecha ARRIBA del texto, apuntando hacia arriba al botón amarillo */
+.arrow-bounce {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: -10px;
+    animation: arrow-bounce-up 1s infinite;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
+    order: -1; /* Fuerza a que esté PRIMERO (arriba) */
+}
+
+.arrow-bounce i {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+/* Texto HAZ CLICK AQUI debajo de la flecha */
+.click-here-text {
+    background: linear-gradient(135deg, #ff0000 0%, #ff4444 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #ffd700;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
+    animation: pulse-text 1s infinite;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    order: 1; /* Fuerza a que esté SEGUNDO (abajo) */
+}
+
+@keyframes bounce-pointer {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-text {
+    0%, 100% { transform: scale(1); box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(255, 0, 0, 0.8); }
+}
+
+/* Animación de la flecha hacia ARRIBA */
+@keyframes arrow-bounce-up {
+    0%, 100% { transform: translateY(0) rotate(180deg); opacity: 1; }
+    50% { transform: translateY(-10px) rotate(180deg); opacity: 0.8; }
+}
+
+.click-here-pointer:hover .click-here-text {
+    background: linear-gradient(135deg, #ff2222 0%, #ff6666 100%);
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .click-here-text {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+    .arrow-bounce {
+        font-size: 2rem;
+        margin-bottom: -5px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1381,6 +1458,12 @@
 <a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/#" class="btn-bendecidos">
     <i class="fas fa-praying-hands"></i>
     Escoge tus BENDECIDOS  para hoy
+</a>
+<a href="https://bolsillolleno.github.io/SorteosBolsilloLleno/" 
+   class="click-here-pointer" 
+   onclick="window.location.href='https://bolsillolleno.github.io/SorteosBolsilloLleno/'; return false;">
+    <div class="arrow-bounce"><i class="fas fa-chevron-down"></i></div>
+    <div class="click-here-text"><i class="fas fa-hand-pointer"></i> HAZ CLICK AQUI <i class="fas fa-hand-pointer"></i></div>
 </a>
                 <div class="photo-decoration"></div>
                 <img src="https://i.imgur.com/tWtHasT.jpeg" alt="Admin Bol$illo Lleno" class="admin-photo">
