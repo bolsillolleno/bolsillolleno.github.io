@@ -1931,8 +1931,8 @@ function descargarTablaImagen(){
       ctx.stroke();
       ctx.restore();
 
-      if(isPag && logoImg){
-        // Dibujar logo tapando el número — con clip circular
+      if((isPag || isPen) && logoImg){
+        // Tanto pagados como pendientes se tapan con el logo
         ctx.save();
         const cx = x + CELL/2, cy = y + CELL/2, r = CELL*0.44;
         ctx.beginPath();
@@ -1940,25 +1940,19 @@ function descargarTablaImagen(){
         ctx.clip();
         ctx.drawImage(logoImg, cx-r, cy-r, r*2, r*2);
         ctx.restore();
-      } else if(isPag && !logoImg){
+      } else if((isPag || isPen) && !logoImg){
         // Fallback sin logo: emoji moneda
         ctx.font = `${CELL*0.52}px serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText('💰', x+CELL/2, y+CELL/2);
       } else {
-        // Número visible
-        ctx.fillStyle = isPen ? '#fbbf24' : '#34d399';
+        // Número disponible visible
+        ctx.fillStyle = '#34d399';
         ctx.font = `800 ${CELL*0.3}px "Plus Jakarta Sans", sans-serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(num, x+CELL/2, y+CELL/2);
-        if(isPen){
-          // ⏳ pequeño abajo a la derecha
-          ctx.font = `${CELL*0.2}px serif`;
-          ctx.textBaseline = 'alphabetic';
-          ctx.fillText('⏳', x+CELL-12, y+CELL-8);
-        }
       }
     }
 
