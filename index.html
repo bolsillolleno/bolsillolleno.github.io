@@ -1965,12 +1965,48 @@ function descargarTablaImagen(){
     const now = new Date();
     ctx.fillText(`Generado ${now.toLocaleDateString('es-CO')} ${now.toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'})}  ·  bolsillolleno`, W/2, fy+16);
 
-    // ── Descarga ─────────────────────────────────────────────
-    const link = document.createElement('a');
-    link.download = `tabla_${nombre.replace(/\s+/g,'_')}_${Date.now()}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    snack('Imagen descargada 🖼');
+    // ── Descarga compatible con WebView y navegador ───────────
+    const dataUrl = canvas.toDataURL('image/png');
+
+    // Intentar descarga directa (funciona en navegador)
+    try {
+      const link = document.createElement('a');
+      link.download = `tabla_${nombre.replace(/\s+/g,'_')}_${Date.now()}.png`;
+      link.href = dataUrl;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch(e){}
+
+    // Mostrar siempre el modal con la imagen (funciona en WebView)
+    let overlay = document.getElementById('imgOverlay');
+    if(!overlay){
+      overlay = document.createElement('div');
+      overlay.id = 'imgOverlay';
+      overlay.style.cssText = `
+        position:fixed;inset:0;z-index:99999;
+        background:rgba(0,0,0,0.93);
+        display:flex;flex-direction:column;
+        align-items:center;justify-content:center;
+        padding:16px;
+      `;
+      overlay.innerHTML = `
+        <div style="color:#f59e0b;font-size:.78em;font-weight:700;margin-bottom:12px;text-align:center;opacity:.8">
+          📲 Mantén presionada la imagen → <strong>Guardar imagen</strong>
+        </div>
+        <img id="imgOverlayImg" style="max-width:100%;max-height:75vh;border-radius:12px;border:1.5px solid rgba(245,158,11,.3);box-shadow:0 0 40px rgba(0,0,0,.8)"/>
+        <button onclick="document.getElementById('imgOverlay').style.display='none'"
+          style="margin-top:16px;padding:10px 32px;border-radius:12px;
+          background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+          color:#fff;font-size:.85em;font-weight:700;cursor:pointer">
+          ✕ Cerrar
+        </button>
+      `;
+      document.body.appendChild(overlay);
+    }
+    document.getElementById('imgOverlayImg').src = dataUrl;
+    overlay.style.display = 'flex';
+    snack('Mantén presionada la imagen para guardarla 📲');
   });
 }
 
