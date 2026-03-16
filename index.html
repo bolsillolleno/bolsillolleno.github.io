@@ -1073,8 +1073,7 @@ function login(){
   firebase.auth().signInWithEmailAndPassword(email,pwd)
     .then(uc=>{
       load(false);
-      if(uc.user.email===ADMIN){launchApp();}
-      else{firebase.auth().signOut();err.textContent='Sin permisos de administrador';err.style.display='block';}
+      launchApp();
     })
     .catch(e=>{
       load(false);
